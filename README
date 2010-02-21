@@ -1,0 +1,23 @@
+Objective-C library for adding entries to instapaper.com
+
+Usage: copy instaPaperLib.m and instaPaperLib.h into your Classes folder and then #include "instaPaperLib.h"
+	you can call the library something like the example below
+
+	instaPaperLib *IPLib = [[instaPaperLib alloc] init];
+	BOOL response = [IPLib postToInstapaperWithUserName:@"username" 
+						andPassword:@"password" 
+						    andBody:@"sample text snippit" 
+						     andURL:@"http://plainnote.kosertech.com" 
+					           andTitle:@"Your post title"];
+		
+	if(response){
+		//NSLog(@"Good status");
+	}
+	else{
+		//NSLog(@"Bad Status");
+		
+	}		
+
+	[IPLib release];
+
+
